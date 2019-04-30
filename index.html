@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETWAR LIVE</title>
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <link href="https://bootswatch.com/4/slate/bootstrap.min.css" rel="stylesheet">
+    <link href="http://videojs.github.io/video.js/video-js/skins/vim.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      div.shadowbox {
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+      }
+    </style>
+  </head>
+  <body>  
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <img alt="Netwar Logo" src="https://www.netwar.org/wp-content/uploads/2018/01/Netwar_Logo.png" style="height: 75px;" />
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+          <video id="video" autoplay="" class="videoCentered"></video>
+          <script>
+            var video = document.getElementById('video');
+            if(Hls.isSupported()) {
+              var hls = new Hls();
+              hls.loadSource('live.m3u8');
+              hls.attachMedia(video);
+              hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                video.play();
+            });
+           }
+
+            function getHostname() {
+              var hostname = location.hostname;
+              document.getElementById("urlcode").innerHTML= hostname;
+            }
+          </script>
+          <br>
+          <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#streamdata" onclick="getHostname()"><i class="fa fa-caret-square-down"></i> Export Stream</button>
+          <div class="mt-2 card collapse" id="streamdata">
+            <div class="card-body rounded text-white bg-primary">
+              http://<span id="urlcode"></span>/live.m3u8
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="mt-2 col-md-8" align="center">
+          <h6>Made with <font color="#ff0000"><i class="fas fa-heart"></i></font> by the NETWAR Staff</h6>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
