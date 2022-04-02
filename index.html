@@ -37,8 +37,8 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <video-js id="vid1" class="vjs-default-skin vjs-big-play-centered" poster="https://github.com/netwarlan/webplayer/raw/master/streamposter.jpg" controls preload="auto">
-          <source src='netwar.m3u8' type="application/x-mpegURL">
+        <video-js id="vid1" class="vjs-default-skin vjs-big-play-centered" poster="https://raw.githubusercontent.com/netwarlan/webplayer/master/streamposter.jpg" controls preload="auto">
+          <source src='hls/netwar.m3u8' type="application/x-mpegURL">
         </video-js>
 
         <script src="https://unpkg.com/video.js/dist/video.js"></script>
@@ -67,7 +67,7 @@
         <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#streamdata" onclick="getHostname()"><i class="fa fa-caret-square-down"></i> Export Stream</button>
         <div class="card collapse" id="streamdata">
           <div class="card-body rounded text-white bg-primary">
-            rtmp://<span id="urlcode"></span>/live
+            rtmp://<span id="urlcode"></span>/live/hls/netwar.m3u8
           </div>
         </div>
       </div>
