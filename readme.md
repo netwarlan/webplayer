@@ -6,4 +6,4 @@ This code is pulled automatically as part of the "NETWAR-STREAMSERVICE" deployme
 
 Preview
 -------
-![Frontend Preview](screenshot.jpg "Preview")
+![Frontend Preview](git/screenshot.jpg "Preview")
