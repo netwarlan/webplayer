@@ -6,10 +6,10 @@
     box-shadow: 0 0 25px #000000;
 }
 
-.love-heart {
-    color: #ff0000;
+.footer {
+    text-align: center;
 }
 
-#footer {
-    text-align: center;
+.heart {
+    color: #ff0000;
 }
