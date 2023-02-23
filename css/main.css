@@ -6,10 +6,10 @@
     box-shadow: 0 0 25px #000000;
 }
 
-.footer {
+div.footer {
     text-align: center;
 }
 
-.heart {
+span.red {
     color: #ff0000;
 }
