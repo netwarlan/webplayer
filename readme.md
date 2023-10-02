@@ -1,9 +1,6 @@
-NETWAR WEB PLAYER
-=================
-
-This repo contains the code that creates the livestream frontend and user interaction.
+# NETWAR WEB PLAYER
+This repo contains the code that creates the live stream frontend and user interaction.
 This code is pulled automatically as part of the "NETWAR-STREAMSERVICE" deployment.
 
-Preview
--------
+### Preview
 ![Frontend Preview](git/screenshot.jpg "Preview")
